@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box; /*all the boxes include border and padding*/
+}
+
+/* .column:nth-child(1)
+{
+    background: red;
+}
+
+.column:nth-child(2)
+{
+    background: yellow;
+}
+
+.column:nth-child(3)
+{
+    background: green;
+}
+
+.column:nth-child(4)
+{
+    background: blue;
+} */
+
+.container{
+    display: flex ;
+    flex-wrap: wrap;
+}
+
+.column{
+    flex : 1 ;
+    min-width: 300px ;
+    /* width : 25% ; */
+}
+
+img{
+    width :100% ;
+}
