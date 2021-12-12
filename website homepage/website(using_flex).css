@@ -1,0 +1,249 @@
+body{
+    /*we set font property in whole body tag in case the fonts of webpage dont't work*/
+    font : Arial , sans-serif ; 
+    margin : 0 ;
+    padding : 0 ;
+}
+
+*{
+    box-sizing: border-box ;
+}
+
+#container{
+    /* border : 1px solid grey ; */
+    width : 90% ;
+    margin : 0px auto ;
+
+    /*to make sure footer sticks to the bottom */
+    display: flex ;
+    flex-direction: column ;
+    height : 100vh ;
+}
+
+#header{
+    /* height : 100px ; */
+    padding : 10px 0px ;
+    display : flex ;
+    flex-wrap: wrap ;
+}
+
+#heading{
+    /* float : left ; */
+    /* flex : 1 ; (this means it's flex grow with flex-basis: 0) */
+    flex : 50% ; /*this means it is flex-basis*/
+    /* min-width: 500px ; (OR OTHER METHOD FOR flex : 50%)*/
+}
+
+h1 a{
+    font-size : 50px ;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    text-decoration: none ;
+    font-weight:lighter;
+    color : purple ;
+}
+
+#searchbox{
+    background: linear-gradient(rgb(169, 228, 169) , rgb(69, 212, 69));
+    background: -webkit-linear-gradient(rgb(169, 228, 169) , rgb(69, 212, 69));
+    background: -o-linear-gradient(rgb(169, 228, 169) , rgb(69, 212, 69));
+    background: -moz-linear-gradient(rgb(169, 228, 169) , rgb(69, 212, 69));
+    /* width : 400px ;  width and flex property are not compatible together so we use min-width property*/ 
+    min-width: 500px ;
+    /* height : 50px ; */
+    padding : 20px ;
+    /* margin-top : 15px ; */
+    /* float : right ; */
+    flex : 1; /* OR WE CAN WRITE flex : 50%(represents flex-basis)*/
+    display : flex ;
+    justify-content: center ;
+    align-items: center ;
+}
+
+.button{
+    color : white ;
+    font-size: 15px ;
+    font-weight: bold ;
+    background: purple;
+    float : right ;
+    padding : 5px ;
+    border : 1px solid black ;
+    border-radius: 6px;
+}
+
+.text{
+    color : rgb(46, 98, 158) ;
+    font-size: 15px;
+    padding : 5px ;
+    width : 250px ;
+    float : left ;
+    background: white url(images/search.png) right center no-repeat;
+    border : 1.5px ridge rgb(10, 92, 31);
+    border-radius : 6px ;
+}
+
+.clear{
+    clear : both ;
+}
+
+#menu{
+    background : linear-gradient(rgb(222, 241, 184) , rgb(166, 226, 46));
+    background : -webkit-linear-gradient(rgb(222, 241, 184) , rgb(166, 226, 46));
+    background : -o-linear-gradient(rgb(222, 241, 184) , rgb(166, 226, 46));
+    background : -moz-linear-gradient(rgb(222, 241, 184) , rgb(166, 226, 46));
+    /* height : 70px ; */
+    padding : 20px 0 ;
+    display: flex ;
+    flex-wrap: wrap ;
+}
+
+#menu a{    
+    /* float : left ; */
+    border-right : 1px solid black ;
+    padding : 0 30px ;
+}
+
+#menu a:last-child{
+    border: none ;
+}
+
+#menu a{
+    text-transform: uppercase;
+    text-decoration : none ;
+    line-height: 30px;
+    font-size : 18px ;
+    color : purple ;
+    transition: font-size 0.5s ease;
+    -webkit-transition: font-size 0.5s ease;
+    -o-transition: font-size 0.5s ease;
+    -moz-transition: font-size 0.5s ease;
+    -ms-transition: font-size 0.5s ease;
+}
+
+#menu a:hover , #menu a.active{
+    font-size : 20px ;
+    color : rgb(175, 18, 175);
+    font-weight: bold;
+}
+
+/* CSS media query :-
+   small screens : vertical menu*/
+@media screen and (max-width : 700px){
+    #menu{
+        flex-direction: column ;
+        align-content: center ;
+    }
+
+    #menu a{
+        border-right: none ;
+    }
+}
+
+.intro{
+    background: linear-gradient(rgb(183, 226, 183) , rgb(76, 156, 76));
+    background: -webkit-linear-gradient(rgb(183, 226, 183) , rgb(76, 156, 76));
+    background: -o-linear-gradient(rgb(183, 226, 183) , rgb(76, 156, 76));
+    background: -moz-linear-gradient(rgb(183, 226, 183) , rgb(76, 156, 76));
+
+    padding : 30px ;
+    margin : 20px 0 ;
+}
+
+.intro h3{
+    font-size : 50px;
+    color:rgb(14, 92, 14);
+    font-weight: 30px;
+
+}
+
+.intro p{
+    font-size : 25px;
+    color:rgb(104, 122, 22);
+    font-weight: lighter;
+    text-align: justify;
+
+}
+
+.sidebars{
+    display : flex ;
+    flex-wrap : wrap ;
+}
+
+.sidebarwrapper{ /* now this is flex items and not sidebar*/
+    flex : 50% ;
+    padding : 5px ;
+}
+
+.sidebar{
+    border : 3px double yellowgreen ;
+    border-radius : 20px ;
+    width : 100% ;
+    height : 100% ;
+    padding : 10px 30px ;
+    background :rgb(240, 245, 218) ;
+    /*flex: 1; (we didn't use this bcoz in this flex-basis:0 & size of sidebars doesn't remain the same)*/
+    
+    /* flex : 50% ; 
+    [we used flex-basis bcoz we need the sidebars to grow and shrink at same rate without 
+     getting their width altered i.e. size of boxes remian same all the time]
+    */
+
+}
+
+.sidebar ul li a{
+    text-decoration: none ;
+    color :rgb(194, 88, 194) ;
+    font-size : 20px ;
+    transition: font-size 0.5s ease ;
+    -webkit-transition: font-size 0.5s ease ;
+    -moz-transition: font-size 0.5s ease ;
+    -o-transition: font-size 0.5s ease ;
+    -ms-transition: font-size 0.5s ease ;
+}
+
+.sidebar ul li a:hover , .sidebar ul li a.active{
+    text-decoration: none;
+    font-size : 23px;
+    color :rgb(156, 21, 100);
+    font-weight: bold;
+}
+
+.sidebar h3{
+    font-size : 30px ;
+    color :rgb(119, 9, 119) ;
+}
+
+.sidebar ul {
+    padding-top : 10px ;
+}
+
+/* #leftsidebar{
+    float : left ;
+}
+
+#rightsidebar{
+    float : right ;
+} */
+
+
+#leftsidebar ul li{
+    padding : 5px 0 5px 10px ; 
+    list-style-image: url(images/arrow.png);
+}
+
+#rightsidebar ul li{
+    /* padding : 10px 0 10px 20px ;
+    list-style-image: url(images/tick.png); */
+    padding : 17px 0 17px 70px ;
+    background: url(images/tick.png) left center no-repeat;
+}
+
+.footer{
+    background : linear-gradient(rgb(245, 243, 124) , rgb(191, 218, 42));
+    background : -webkit-linear-gradient(rgb(245, 243, 124) , rgb(191, 218, 42));
+    background : -o-linear-gradient(rgb(245, 243, 124) , rgb(191, 218, 42));
+    background : -moz-linear-gradient(rgb(245, 243, 124) , rgb(191, 218, 42));
+    height : 60px ;
+    padding : 10px 30px ;
+    margin-top : auto ; /* to make sure footer sticks to the bottom if the webpage size is reduced*?
+    font-size : 20px ;
+}

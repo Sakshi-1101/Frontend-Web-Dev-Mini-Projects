@@ -1,0 +1,201 @@
+body{
+    /*we set font property in whole body tag in case the fonts of webpage dont't work*/
+    font : Arial , sans-serif ; 
+}
+
+#container{
+    /* border : 1px solid grey ; */
+    width : 1050px ;
+    margin : 0px auto ;
+}
+
+#header{
+    height : 100px ;
+    padding : 10px 0px ;
+}
+
+#heading{
+    float : left ;
+}
+
+h1 a{
+    font-size : 50px ;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    text-decoration: none ;
+    font-weight:lighter;
+    color : purple ;
+}
+
+#searchbox{
+    background: linear-gradient(rgb(169, 228, 169) , rgb(69, 212, 69));
+    background: -webkit-linear-gradient(rgb(169, 228, 169) , rgb(69, 212, 69));
+    background: -o-linear-gradient(rgb(169, 228, 169) , rgb(69, 212, 69));
+    background: -moz-linear-gradient(rgb(169, 228, 169) , rgb(69, 212, 69));
+    width : 400px ;
+    height : 50px ;
+    padding : 20px 20px 0 20px ;
+    margin-top : 15px ;
+    float : right ;
+}
+
+.button{
+    color : white ;
+    font-size: 15px ;
+    font-weight: bold ;
+    background: purple;
+    float : right ;
+    padding : 5px ;
+    border : 1px solid black ;
+    border-radius: 6px;
+}
+
+.text{
+    color : rgb(46, 98, 158) ;
+    font-size: 15px;
+    padding : 5px ;
+    width : 250px ;
+    float : left ;
+    background: white url(images/search.png) right center no-repeat;
+    border : 1.5px ridge rgb(10, 92, 31);
+    border-radius : 6px ;
+}
+
+.clear{
+    clear : both ;
+}
+
+#menu{
+    background : linear-gradient(rgb(222, 241, 184) , rgb(166, 226, 46));
+    background : -webkit-linear-gradient(rgb(222, 241, 184) , rgb(166, 226, 46));
+    background : -o-linear-gradient(rgb(222, 241, 184) , rgb(166, 226, 46));
+    background : -moz-linear-gradient(rgb(222, 241, 184) , rgb(166, 226, 46));
+    height : 70px ;
+    padding : 7px 0 ;
+}
+
+ul{
+    list-style: none;
+}
+
+#menu ul li{    
+    float : left ;
+    border-right : 1px solid black ;
+    padding : 0 30px ;
+}
+
+#menu ul li:last-child{
+    border: none ;
+}
+
+#menu ul li a{
+    text-transform: uppercase;
+    text-decoration : none ;
+    line-height: 30px;
+    font-size : 18px ;
+    color : purple ;
+    transition: font-size 0.5s ease;
+    -webkit-transition: font-size 0.5s ease;
+    -o-transition: font-size 0.5s ease;
+    -moz-transition: font-size 0.5s ease;
+    -ms-transition: font-size 0.5s ease;
+}
+
+#menu ul li a:hover , #menu ul li a.active{
+    font-size : 20px ;
+    color : rgb(175, 18, 175);
+    font-weight: bold;
+}
+
+.intro{
+    background: linear-gradient(rgb(183, 226, 183) , rgb(76, 156, 76));
+    background: -webkit-linear-gradient(rgb(183, 226, 183) , rgb(76, 156, 76));
+    background: -o-linear-gradient(rgb(183, 226, 183) , rgb(76, 156, 76));
+    background: -moz-linear-gradient(rgb(183, 226, 183) , rgb(76, 156, 76));
+
+    padding : 30px ;
+    margin : 20px 0 ;
+}
+
+.intro h3{
+    font-size : 50px;
+    color:rgb(14, 92, 14);
+    font-weight: 30px;
+
+}
+
+.intro p{
+    font-size : 25px;
+    color:rgb(104, 122, 22);
+    font-weight: lighter;
+    text-align: justify;
+
+}
+
+.sidebar{
+    border : 3px double yellowgreen ;
+    border-radius : 20px ;
+    width : 450px ;
+    height : 550px;
+    padding : 10px 30px ;
+    background :rgb(240, 245, 218) 
+
+}
+
+.sidebar ul li a{
+    text-decoration: none ;
+    color :rgb(194, 88, 194) ;
+    font-size : 20px ;
+    transition: font-size 0.5s ease ;
+    -webkit-transition: font-size 0.5s ease ;
+    -moz-transition: font-size 0.5s ease ;
+    -o-transition: font-size 0.5s ease ;
+    -ms-transition: font-size 0.5s ease ;
+}
+
+.sidebar ul li a:hover , .sidebar ul li a.active{
+    text-decoration: none;
+    font-size : 23px;
+    color :rgb(156, 21, 100);
+    font-weight: bold;
+}
+
+.sidebar h3{
+    font-size : 30px ;
+    color :rgb(119, 9, 119) ;
+}
+
+.sidebar ul {
+    padding-top : 10px ;
+}
+
+#leftsidebar{
+    float : left ;
+}
+
+#rightsidebar{
+    float : right ;
+}
+
+
+#leftsidebar ul li{
+    padding : 5px 0 5px 10px ; 
+    list-style-image: url(images/arrow.png);
+}
+
+#rightsidebar ul li{
+    /* padding : 10px 0 10px 20px ;
+    list-style-image: url(images/tick.png); */
+    padding : 17px 0 17px 70px ;
+    background: url(images/tick.png) left center no-repeat;
+}
+
+.footer{
+    background : linear-gradient(rgb(245, 243, 124) , rgb(191, 218, 42));
+    background : -webkit-linear-gradient(rgb(245, 243, 124) , rgb(191, 218, 42));
+    background : -o-linear-gradient(rgb(245, 243, 124) , rgb(191, 218, 42));
+    background : -moz-linear-gradient(rgb(245, 243, 124) , rgb(191, 218, 42));
+    height : 60px ;
+    padding : 10px 30px ;
+    margin-top : 15px ;
+    font-size : 20px ;
+}
