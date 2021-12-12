@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Random Color Generator
+    </title>
+    <style>
+      #container{
+          width : 100wh ;
+          height : 100vh ;
+          background-color:antiquewhite ;
+          display: flex ;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+
+      h1{
+          font-family:cursive;
+          font-size: 30px ;
+          font-weight: bold;
+          font-style: italic;
+          text-align: center ;
+      }
+
+      #button{
+          width: 100px;
+          height : 50px ;
+          border-radius: 10px ;
+          padding: 5px ;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background: linear-gradient(white ,rgb(94, 154, 189));
+          cursor:grabbing ;
+      }
+	</style>
+  </head>
+  
+  <body>
+    <div id = "container">
+        <h1>Generate Random Color!</h1>
+        <button id="button">
+          Change Color
+        </button>
+    </div>
+    <script>
+      var x, y, z, fcolor;
+      document.getElementById("button").onclick = function(){
+          x = Math.round(Math.random() * 256);
+          y = Math.round(Math.random() * 256);
+          z = Math.round(Math.random() * 256);
+          fcolor = 'rgb(' + x + ', ' + y + ' , ' + z + ')';
+          document.getElementById("container").style.backgroundColor= fcolor ;
+      }
+    </script>
+  </body>
+  
+</html>
